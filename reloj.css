@@ -1,7 +1,7 @@
 
 * {
-    margin: 50;
-    padding: 50;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: "Poppins";
 }
@@ -15,7 +15,7 @@
 
 body {
     display: flex;
-    min-height: 1vh;
+    min-height: 100vh;
     align-items: center;
     justify-content: center;
     background: var(--primary-color);
@@ -32,14 +32,14 @@ body.dark {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 60px;
 }
 
-.container.clock {
+.container .clock {
     display: flex;
-    height: 40px;
-    width: 40px;
-    border-radius: 500%;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
     align-items: center;
     justify-content: center;
     background: var(--white-color);
@@ -49,23 +49,23 @@ body.dark {
 
 .clock label {
     position: absolute;
-    inset: 40px;
+    inset: 20px;
     text-align: center;
     transform: rotate(calc(var(--i)*(360deg / 12)));
 }
 
 .clock label span {
     display: inline-block;
-    font-size: 50px;
-    font-weight: 50;
+    font-size: 30px;
+    font-weight: 600;
     color: var(--black-color);
     transform: rotate(calc(var(--i)*(-360deg / 12)));            
 }
 
-.container.indicator {
+.container .indicator {
     position: absolute;
-    height: 100px;
-    width: 100px;
+    height: 10px;
+    width: 10px;
     display: flex;
     justify-content: center;
 }
@@ -76,39 +76,39 @@ body.dark {
     height: 100%;
     width: 100%;
     border-radius: 50%;
-    z-index: 10;
+    z-index: 100;
     background: var(--black-color);
     border: 4px solid var(--red-color);
 }
 
-.indicator.hand {
+.indicator .hand {
     position: absolute;
-    height: 13px;
-    width: 40px;
-    bottom: 10;
-    border-radius: 250px;
+    height: 130px;
+    width: 4px;
+    bottom: 0;
+    border-radius: 25px;
     transform-origin: bottom;
     background: var(--red-color);
 }
 
 .hand.minute{
-    height: 12px;
-    width: 50px;
+    height: 120px;
+    width: 5px;
     background: var(--black-color);
 }
 
 .hand.hour{
-    height: 10px;
+    height: 100px;
     width: 8px;
     background: var(--black-color);
 }
 
 .mode-switch {
-    padding: 5px 6px;
+    padding: 10px 20px;
     border-radius: 8px;
-    font-size: 20px;
+    font-size: 22px;
     font-family: 'Courier New', Courier, monospace;
-    font-weight: 600;
+    font-weight: 400;
     display: inline-block;
     color: var(--white-color);
     background: var(--black-color);
